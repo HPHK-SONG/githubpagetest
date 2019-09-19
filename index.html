@@ -10,10 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="index.css" />
-    <script
-      src="https://kit.fontawesome.com/1997bacb76.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
   </head>
   <body>
     <div id="root"></div>
@@ -39,7 +36,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       const Navigation = () => (
-        <nav className="nav flex-column bg-dark">
+        <nav className="nav bg-dark">
           <img
             src="http://placehold.it/100x100"
             alt="avatar"
@@ -57,8 +54,6 @@
         </nav>
       );
 
-      const Contents = ({ children }) => <div class="contents">{children}</div>;
-
       const Intro = () => (
         <div className="container" id="intro">
           <h1>YOUR NAME</h1>
@@ -68,7 +63,7 @@
             </a>
             <p className="lead">서울 어딘가에 사는 누구입니다</p>
           </div>
-          <Contents>
+          <div class="contents">
             <h2>경력</h2>
             <p className="lead">내 경력은 어쩌구저쩌구</p>
             <h2>자기소개</h2>
@@ -78,7 +73,7 @@
                 <i class="fab fa-github-square fa-3x"></i>
               </a>
             </div>
-          </Contents>
+          </div>
         </div>
       );
 
@@ -86,7 +81,7 @@
         <div className="container" id="proj1">
           <h1>YOUR PROJECT NAME</h1>
           <p>2019.09~2019.11</p>
-          <Contents>
+          <div class="contents">
             <h2>개요</h2>
             <p>이 프로젝트는 영국에서부터 시작되어...</p>
             <h2>후기</h2>
@@ -98,14 +93,14 @@
               <img src="http://placehold.it/200x200" alt="project result" />
               <img src="http://placehold.it/200x200" alt="project result" />
             </div>
-          </Contents>
+          </div>
         </div>
       );
       const Project2 = () => (
         <div className="container" id="proj2">
           <h1>YOUR PROJECT2 NAME</h1>
           <p>2019.09~2019.11</p>
-          <Contents>
+          <div class="contents">
             <h2>개요</h2>
             <p>이 프로젝트는 영국에서부터 시작되어...</p>
             <h2>후기</h2>
@@ -117,7 +112,7 @@
               <img src="http://placehold.it/200x200" alt="project result" />
               <img src="http://placehold.it/200x200" alt="project result" />
             </div>
-          </Contents>
+          </div>
         </div>
       );
 
