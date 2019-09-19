@@ -1,0 +1,53 @@
+.container {
+  min-height: 100vh;
+  padding-top: 30px;
+}
+.result-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 10px;
+}
+.nav {
+  position: fixed;
+  width: 20vw;
+  min-width: 150px;
+  height: 100vh;
+  align-content: center;
+  padding-top: 50px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: minmax(150px, 20vw) auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.column-start {
+  grid-column-start: 2;
+}
+
+.divider {
+  border: 0;
+  background-color: darkgray;
+  height: 2px;
+}
+
+.contents {
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+.subheading {
+  padding-left: 10px;
+}
+
+.nav-link {
+  color: beige;
+}

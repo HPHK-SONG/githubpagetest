@@ -3,28 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hello World</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/1997bacb76.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
     <script type="text/babel">
-      const Navigation = () => <div>navigation</div>;
+      const Navigation = () => (
+        <nav className="nav flex-column bg-dark">
+          <img
+            src="http://placehold.it/100x100"
+            alt="avatar"
+            className="avatar"
+          />
+          <a className="nav-link" href="#intro">
+            Intro
+          </a>
+          <a className="nav-link" href="#proj1">
+            프로젝트1
+          </a>
+          <a className="nav-link" href="#proj2">
+            프로젝트2
+          </a>
+        </nav>
+      );
 
-      const Intro = () => <div>Intro</div>;
+      const Contents = ({ children }) => <div class="contents">{children}</div>;
 
-      const Project = () => <div>project</div>;
+      const Intro = () => (
+        <div className="container" id="intro">
+          <h1>YOUR NAME</h1>
+          <div class="subheading">
+            <a href="mailto:email@email.com">
+              <h5>your_email@email.com</h5>
+            </a>
+            <p className="lead">서울 어딘가에 사는 누구입니다</p>
+          </div>
+          <Contents>
+            <h2>경력</h2>
+            <p className="lead">내 경력은 어쩌구저쩌구</p>
+            <h2>자기소개</h2>
+            <p className="lead">어려서부터우리집은가난했었고</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-github-square fa-3x"></i>
+              </a>
+            </div>
+          </Contents>
+        </div>
+      );
+
+      const Project1 = () => (
+        <div className="container" id="proj1">
+          <h1>YOUR PROJECT NAME</h1>
+          <p>2019.09~2019.11</p>
+          <Contents>
+            <h2>개요</h2>
+            <p>이 프로젝트는 영국에서부터 시작되어...</p>
+            <h2>후기</h2>
+            <p>이 프로젝트를 보낸 자식을 가만 두지 않을 것이며...</p>
+            <h2>결과</h2>
+            <div className="result-images">
+              <img src="http://placehold.it/200x200" alt="project result" />
+              <img src="http://placehold.it/200x200" alt="project result" />
+              <img src="http://placehold.it/200x200" alt="project result" />
+              <img src="http://placehold.it/200x200" alt="project result" />
+            </div>
+          </Contents>
+        </div>
+      );
+      const Project2 = () => (
+        <div className="container" id="proj2">
+          <h1>YOUR PROJECT2 NAME</h1>
+          <p>2019.09~2019.11</p>
+          <Contents>
+            <h2>개요</h2>
+            <p>이 프로젝트는 영국에서부터 시작되어...</p>
+            <h2>후기</h2>
+            <p>이 프로젝트를 보낸 자식을 가만 두지 않을 것이며...</p>
+            <h2>결과</h2>
+            <div className="result-images">
+              <img src="http://placehold.it/200x200" alt="project result" />
+              <img src="http://placehold.it/200x200" alt="project result" />
+              <img src="http://placehold.it/200x200" alt="project result" />
+              <img src="http://placehold.it/200x200" alt="project result" />
+            </div>
+          </Contents>
+        </div>
+      );
+
+      const Divider = () => <hr className="divider" />;
 
       class App extends React.Component {
         render() {
           return (
             <>
               <Navigation />
-              <Intro />
-              <Project />
+              <div className="projects bg-light">
+                <div className="column-start">
+                  <Intro />
+                  <Divider />
+                  <Project1 />
+                  <Divider />
+                  <Project2 />
+                </div>
+              </div>
             </>
           );
         }
